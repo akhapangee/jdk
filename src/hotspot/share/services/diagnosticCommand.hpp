@@ -984,7 +984,7 @@ public:
 #ifdef LINUX
 
 class SystemMapDCmd : public DCmdWithParser {
-  DCmdArgument<bool> _human_readable;
+  DCmdArgument<bool> _summary;
 public:
   static int num_arguments() { return 1; }
   SystemMapDCmd(outputStream* output, bool heap);
@@ -1002,7 +1002,7 @@ public:
 };
 
 class SystemDumpMapDCmd : public DCmdWithParser {
-  DCmdArgument<bool> _human_readable;
+  DCmdArgument<bool> _summary;
   DCmdArgument<char*> _filename;
 public:
   static int num_arguments() { return 2; }
